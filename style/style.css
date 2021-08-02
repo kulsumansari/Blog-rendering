@@ -1,18 +1,24 @@
 body{
     margin: 0px;
 }
+.navigation,
+.footer,
+.menu-item{
+  background-color: #040431;
+
+}
 .navigation {
     margin: 0px;
-    background-color: #f3f9fa;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px; 
   }
   
   .company-logo {
-    width: 150px;
+    width: 170px;
+    margin-right: 5px;
   }
   
   .logo {
@@ -27,24 +33,25 @@ body{
   }
   .nav-item {
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 20px;  
   }
   
   .nav-link {
     text-decoration: none;
-    color: black;
     font-size: 1.2rem;
+    color: white;
   }
   
   .btn {
     padding: 8px 20px;
-    background-color: black;
+    font-weight: 700;
+    background-color: #056bdf;
     border-radius: 15px;
     color: white;
   }
   
   .btn:hover {
-    background-color: rgba(61, 59, 59, 0.815);
+    background-color: #df0572e3;
   }
   
   /* hamburger menu */
@@ -56,28 +63,49 @@ body{
   .menu img{
     width: 100%;
   }
-  
+  .menu-item{
+    width: 80%;
+    height: 12vh;
+    display: none;
+  }
+
+  .menu-nav-links{
+    display : block;
+    text-align: center;
+  }
+
   
 
 .blog {
     display : flex;
     flex-direction : row;
+    background-image:linear-gradient(#df0572,#38edf3);
 }
 .blog-content{
     width: 70%;
-    padding: 0px 30px;
+    margin: 3%;
+    padding: 0px 20px;
     text-align: justify;
+    background-color: white;
 }
 .blog-content img{
     width:100%;
-    
+    border-radius: 10px;  
+    box-shadow: 2px 2px 2px 2px #040431bd;  
 }
 .related-links{
+    margin-top: 3%;
     width: 30%;
+    color: white;
+    padding-right: 20px;
+
+}
+.related-links h1{
+  border-bottom:2px solid;
 }
 .link-list{
     list-style-type: none;
-    padding:5px 2px;
+    padding: 0px;
 }
 .link-list li{
     padding:5px 5px;
@@ -85,12 +113,13 @@ body{
 
 .footer {
     margin: 0px;
-    background-color: #d4eaee;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    color: white;
+
   }
   
   .footerlink-header{
@@ -101,8 +130,9 @@ body{
     display: inline-block;
     padding-right:10px;
     font-size: 16px;
-    color: black;
     padding-top:10px;
+    color: white;
+
   }
 
   @media (max-width: 768px) {
@@ -112,4 +142,18 @@ body{
     .menu{
       display: unset;
     }
+    .blog{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .blog-content{
+      width: 80%;
+      margin-top: 50px;
+    }
+    .related-links{
+      color: black;
+      width: 85%;
+    }
+    
   }

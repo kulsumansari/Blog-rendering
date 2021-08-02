@@ -12,7 +12,7 @@ fetch(queryUrl)
     .then((res)=>{
         root.appendChild( navigationBar(res.navData) );
         blogsArray = res.blogData;
-        console.log(blogsArray)
+        // console.log(blogsArray)
         let blogIndex = Math.floor(Math.random() * blogsArray.length);
         Blog( blogsArray[blogIndex] );
         root.appendChild( Footer(res.footerData) );
