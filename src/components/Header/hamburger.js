@@ -26,7 +26,7 @@ export const MenuLinks = (props) => {
         navlink.href=link.href;
         navlink.innerText= link.title;
 
-        link.isCta ? navlink.classList.add('nav-link', 'btn') : navlink.classList.add('nav-link');
+        link.isCta ? navlink.classList.add('nav-link', 'btn', 'menu-nav-links') : navlink.classList.add('nav-link','menu-nav-links');
 
         navItem.appendChild(navlink);
         markup.appendChild(navItem);
@@ -38,10 +38,9 @@ const createMenuItem=(isMenuOpen)=>{
     let menus=document.querySelector('.menu-item');
     if(isMenuOpen){  
         menus.style.display='unset';
-        document.querySelectorAll('.nav-link').forEach((link)=>{link.classList.add('menu-nav-links')});
     }
     else{
         menus.style.display= 'none'
-        document.querySelectorAll('.nav-link').forEach((link)=>{link.classList.remove('menu-nav-links')});    }
+    }
 
 }
